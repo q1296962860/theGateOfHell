@@ -122,6 +122,7 @@ public class PlayerMove : MonoBehaviour
             jumpTime = Time.time + jumpHoldDuration;
             //施加一个向上的力，并且是突然发生的
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            AudioManager.PlayJumpAudio(); 
         }
         else if(isJump)
         {
